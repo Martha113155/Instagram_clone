@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Feed</h2>
+{% for post in posts %}
+    <div class="card mb-3">
+        <div class="card-header">
+            Posted by {{ post.author.username }} on {{ post.date_posted.strftime('%Y-%m-%d %H:%M') }}
+        </div>
+        <img src="{{ url_for('static', filename='uploads/' + post.image_file) }}" class="card-img-top" alt="Post image">
+        <div class="card-body">
+            <p class="card-text">{{ post.caption }}</p>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}
