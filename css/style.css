@@ -1,0 +1,10 @@
+body {
+    background-color: #f8f9fa;
+}
+.card-img-top {
+    max-height: 300px;
+    object-fit: cover;
+}
+.alert {
+    margin-bottom: 20px;
+}
